@@ -59,12 +59,11 @@ function ask(){
       var q = res[answers.buying-1].quantity;
       var totalPrice = res[answers.buying-1].price * answers.quantity;
 
-      console.log("q: " + q + "\nanswers.quantity: " + answers.quantity);
 
       if (q > answers.quantity){
         updateQuantity(answers.buying, answers.quantity);
 
-        console.log("Your total price is: $" + totalPrice); 
+        console.log("\nYour total price is: $" + totalPrice.toFixed(2)); 
       }
       else {
         console.log("\nsorry there arent enough\n".red);
